@@ -30,11 +30,7 @@ class ChatActivity : BaseActivity<ActivityChatBinding>() {
         tab.setupWithViewPager(pager)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_person_outline)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-//        initListener()
-
         initObserver()
-
     }
 
     private fun initObserver() {
@@ -43,11 +39,6 @@ class ChatActivity : BaseActivity<ActivityChatBinding>() {
             openActivity(AuthenticationActivity::class.java)
         })
     }
-
-//    private fun initListener() {
-//        TODO("Not yet implemented")
-//    }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
@@ -65,7 +56,6 @@ class ChatActivity : BaseActivity<ActivityChatBinding>() {
                 openActivity(ProfileActivity::class.java)
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
 
